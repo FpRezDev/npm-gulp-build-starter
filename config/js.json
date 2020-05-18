@@ -1,0 +1,6 @@
+[
+  {
+    "dest": "assets/js/foo.js",
+    "src": "js/foo.js"
+  }
+]

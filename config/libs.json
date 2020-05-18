@@ -1,0 +1,6 @@
+[
+  {
+    "dest": "assets/libs/foo",
+    "src": "node_modules/foo/bar.*"
+  }
+]

@@ -4,8 +4,21 @@
   "description": "npm gulp build starter",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "npx gulp"
+    "lint": "npx gulp lint",
+    "lintCss": "npx gulp lintCss",
+    "lintJs": "npx gulp lintJs",
+    "build": "npx gulp build",
+    "buildLibs": "npx gulp buildLibs",
+    "buildCss": "npx gulp buildCss",
+    "buildJs": "npx gulp buildJs",
+    "clean": "npx gulp clean",
+    "cleanLibs": "npx gulp cleanLibs",
+    "cleanCss": "npx gulp cleanCss",
+    "cleanJs": "npx gulp cleanJs",
+    "logConfig": "npx gulp logConfig",
+    "logLibsConfig": "npx gulp logLibsConfig",
+    "logCssConfig": "npx gulp logCssConfig",
+    "logJsConfig": "npx gulp logJsConfig"
   },
   "repository": {
     "type": "git",
