@@ -1,0 +1,24 @@
+{
+  "name": "npm-gulp-build-starter",
+  "version": "1.0.0",
+  "description": "npm gulp build starter",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FpRezDev/npm-gulp-build-starter.git"
+  },
+  "keywords": [
+    "gulp",
+    "npm",
+    "build"
+  ],
+  "author": "FpRezDev <FpRez.Developer@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FpRezDev/npm-gulp-build-starter/issues"
+  },
+  "homepage": "https://github.com/FpRezDev/npm-gulp-build-starter#readme"
+}
