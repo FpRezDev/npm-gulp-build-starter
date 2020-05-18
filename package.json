@@ -4,7 +4,8 @@
   "description": "npm gulp build starter",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "npx gulp"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/FpRezDev/npm-gulp-build-starter/issues"
   },
-  "homepage": "https://github.com/FpRezDev/npm-gulp-build-starter#readme"
+  "homepage": "https://github.com/FpRezDev/npm-gulp-build-starter#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
