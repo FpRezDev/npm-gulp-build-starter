@@ -1,0 +1,28 @@
+// Theme Colors
+$theme-color-primary:   rgb(58, 95, 109) !default;
+$theme-color-secondary:   rgb(130, 169, 178) !default;
+$theme-color-dark:      rgb(35, 41, 60) !default;
+$theme-color-dark-accent: rgb(115, 156, 172) !default;
+$theme-color-light:      rgb(234, 238, 238) !default;
+$theme-color-light-accent: rgb(120, 186, 189) !default;
+$theme-color-info: rgb(17, 19, 27) !default;
+$theme-color-success: rgb(71, 151, 89) !default;
+$theme-color-warning: rgb(196, 135, 33) !default;
+$theme-color-danger: rgb(244, 67, 54) !default;
+
+// Theme Color Map
+$theme-colors: (
+  "primary": $theme-color-primary,
+  "secondary": $theme-color-secondary,
+  "dark": $theme-color-dark,
+  "dark-accent": $theme-color-dark-accent,
+  "light": $theme-color-light,
+  "light-accent": $theme-color-light-accent,
+  "info": $theme-color-info,
+  "success": $theme-color-success,
+  "warning": $theme-color-warning,
+  "danger": $theme-color-danger
+);
+
+// NO ROUNDED CORNERS unless .rounded is specified
+$enable-rounded: false !default;

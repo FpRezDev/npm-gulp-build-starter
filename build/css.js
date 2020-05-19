@@ -1,19 +1,58 @@
-const { series } = require("gulp");
+const { src, dest, series } = require("gulp");
 const config = require("../config/css.json");
+const del = require("del");
+const merge = require("merge-stream");
+const sass = require("gulp-sass");
+sass.compiler = require('node-sass');
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+
+/**
+ * @todo Move all configurations to extenal json in config folder. 
+ *   Proposal: config.json/plugins.json 
+ */
+// sass configuration
+const sassConfig = {
+  outputStyle: "expanded",
+  sourceMap: true,
+  sourceMapContents: true,
+  precision: 6
+};
+
+// autoprefixer configuration
+const autoprefixerConfig = {
+  flexbox: "no-2009"
+};
+
+//postcss plugins config
+const postcssPlugins = [
+  autoprefixer(autoprefixerConfig)
+];
+
 
 function lintCss(cb) {
-  console.log("Linting Css");
+  console.log("Linting Css, Not yet implemented.");
   return cb();
 }
 
-function buildCss(cb) {
+function buildCss() {
   console.log("Building Css");
-  return cb();
+  var tasks = config.map(
+    function(cssConfig) {
+      console.log(`Building: ${cssConfig.src}`);
+      console.log(`To: ${cssConfig.dest}`);
+      return src(cssConfig.src)
+              .pipe(sass(sassConfig).on("error", sass.logError))
+              .pipe(postcss(postcssPlugins))
+              .pipe(dest(cssConfig.dest));
+    }
+  );
+  return merge(tasks);
 }
 
-function cleanCss(cb) {
+function cleanCss() {
   console.log("Cleaning Css");
-  return cb();
+  return del("assets/css/");
 }
 
 function logCssConfig(cb) {

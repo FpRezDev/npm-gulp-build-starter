@@ -12,10 +12,6 @@
     "src": "node_modules/bootstrap/dist/js/bootstrap.js"
   },
   {
-    "dest": "assets/libs/bootstrap/css/",
-    "src": "node_modules/bootstrap/dist/css/bootstrap.css"
-  },
-  {
     "dest": "assets/libs/fontawesome/css/",
     "src": "node_modules/@fortawesome/fontawesome-free/css/all.css"
   },
