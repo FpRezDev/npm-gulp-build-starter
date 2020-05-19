@@ -36,6 +36,12 @@
   },
   "homepage": "https://github.com/FpRezDev/npm-gulp-build-starter#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.5.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "jquery": "^3.5.1",
+    "merge-stream": "^2.0.0",
+    "popper.js": "^1.16.1"
   }
 }

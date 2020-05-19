@@ -1,6 +1,26 @@
 [
   {
-    "dest": "assets/libs/foo",
-    "src": "node_modules/foo/bar.*"
+    "dest": "assets/libs/jquery/",
+    "src": "node_modules/jquery/dist/jquery.slim.js"
+  },
+  {
+    "dest": "assets/libs/popper.js/",
+    "src": "node_modules/popper.js/dist/popper.js"
+  },
+  {
+    "dest": "assets/libs/bootstrap/js/",
+    "src": "node_modules/bootstrap/dist/js/bootstrap.js"
+  },
+  {
+    "dest": "assets/libs/bootstrap/css/",
+    "src": "node_modules/bootstrap/dist/css/bootstrap.css"
+  },
+  {
+    "dest": "assets/libs/fontawesome/css/",
+    "src": "node_modules/@fortawesome/fontawesome-free/css/all.css"
+  },
+  {
+    "dest": "assets/libs/fontawesome/webfonts/",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-*"
   }
 ]
