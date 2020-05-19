@@ -6,6 +6,7 @@ const sass = require("gulp-sass");
 sass.compiler = require('node-sass');
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const stylelint = require("gulp-stylelint");
 
 /**
  * @todo Move all configurations to extenal json in config folder. 
@@ -29,10 +30,23 @@ const postcssPlugins = [
   autoprefixer(autoprefixerConfig)
 ];
 
+//stylelint config
+const stylelintConfig = {
+  reporters: [
+      { formatter: "string", console: true }
+  ]
+};
 
-function lintCss(cb) {
-  console.log("Linting Css, Not yet implemented.");
-  return cb();
+function lintCss() {
+  console.log("Linting Css.");
+  var tasks = config.map(
+    function(cssConfig) {
+      console.log(`Linting: ${cssConfig.src}`);
+      return src(cssConfig.src)
+              .pipe(stylelint(stylelintConfig))
+    }
+  );
+  return merge(tasks);
 }
 
 function buildCss() {
