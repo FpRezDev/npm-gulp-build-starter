@@ -1,19 +1,31 @@
-const { series } = require("gulp");
+const { src, dest, series } = require("gulp");
 const config = require("../config/js.json");
+const merge = require("merge-stream");
+const concat = require("gulp-concat");
+const del = require("del");
 
 function lintJs(cb) {
   console.log("Linting Js");
   return cb();
 }
 
-function buildJs(cb) {
+function buildJs() {
   console.log("Building Js");
-  return cb();
+  var tasks = config.map(
+    function(jsConfig) {
+      console.log(`Building: ${jsConfig.src}`);
+      console.log(`To: ${jsConfig.dest}`);
+      return src(jsConfig.src, { base: "." })
+              .pipe(concat(jsConfig.dest))
+              .pipe(dest("."));
+    }
+  );
+  return merge(tasks);
 }
 
-function cleanJs(cb) {
+function cleanJs() {
   console.log("Cleaning Js");
-  return cb();
+  return del("assets/js/");
 }
 
 function logJsConfig(cb) {

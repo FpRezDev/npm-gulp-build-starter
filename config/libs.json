@@ -8,10 +8,6 @@
     "src": "node_modules/popper.js/dist/popper.js"
   },
   {
-    "dest": "assets/libs/bootstrap/js/",
-    "src": "node_modules/bootstrap/dist/js/bootstrap.js"
-  },
-  {
     "dest": "assets/libs/fontawesome/css/",
     "src": "node_modules/@fortawesome/fontawesome-free/css/all.css"
   },
